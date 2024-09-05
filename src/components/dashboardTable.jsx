@@ -9,9 +9,23 @@ const people = [
   {
     name: "Lindsay Walton",
     title: "Front-end Developer",
-    email: "lindsay.walton@example.com",
-    role: "Member",
+    description: "A front-end developer is responsible for implementing visual elements that users see and interact with in a web application.",
+    role: "Front-end Developer",
   },
+  {
+    name: "Om dwivedi",
+    title: "Back-end Developer",
+    description: "A back-end developer is responsible for server-side web application logic and integration of the work front-end developers do.",
+    role: "Back-end Developer",
+  },
+{
+        name: "Rajesh Kumar",
+        title: "Full Stack Developer",
+        description: "A full-stack developer is a web developer or engineer who works with both the front and back ends of a website or application.",
+        role: "Full Stack Developer",
+},
+
+
   
 ];
 
@@ -130,7 +144,7 @@ const dataTable = () => {
                         <input
                           type="checkbox"
                           className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                          value={person.email}
+                          value={person.description}
                           checked={selectedPeople.includes(person)}
                           onChange={(e) =>
                             setSelectedPeople(
@@ -155,7 +169,7 @@ const dataTable = () => {
                         {person.title}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {person.email}
+                        {person.description}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         {person.role}
