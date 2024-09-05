@@ -7,7 +7,7 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="bg-white rounded-lg p-4">
+    <nav className="bg-transparent rounded-lg p-4 px-9">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-black text-2xl font-bold">
           Anukul

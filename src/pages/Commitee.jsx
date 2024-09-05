@@ -1,11 +1,12 @@
 import React from 'react'
+import Entity from '../components/EntityData'
 
 const Commitee = () => {
   return (
-    <div className="pr-20 pl-20 pt-10">
-      <p>nice</p>
+    <div className="flex flex-col gap-28 pl-40 pr-40 pt-28">
+      <Entity />
     </div>
-  )
+  );
 }
 
 export default Commitee

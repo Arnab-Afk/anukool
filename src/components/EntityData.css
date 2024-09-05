@@ -1,0 +1,23 @@
+@import 'tailwindcss/tailwind.css';
+
+html, body, #root {
+  height: 100%;
+  margin: ;
+  font-family: 'Inter', sans-serif;
+}
+
+.ag-theme-alpine {
+  border: none;
+  .ag-header {
+    border-bottom: 1px solid #e2e8f0; /* Tailwind's border-gray-300 */
+  }
+  .ag-row,
+  .ag-cell {
+    border: none;
+    padding: 8px 16px; /* Tailwind's px-4 py-2 */
+  }
+  .ag-header-cell {
+    padding: 8px 16px; /* Tailwind's px-4 py-2 */
+    background-color: transparent;
+  }
+}

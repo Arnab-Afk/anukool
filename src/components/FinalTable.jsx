@@ -175,7 +175,7 @@ const CandidateBoardList = () => {
                         </div>
                       </div>
                       <DrawerFooter>
-                        <Button>Submit</Button>
+                        <Button>Approve</Button>
                         <DrawerClose asChild>
                           <Button variant="outline">Cancel</Button>
                         </DrawerClose>
