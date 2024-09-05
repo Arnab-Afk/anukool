@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-xl rounded-lg p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-black text-2xl font-bold">
-          AnuKool
+          Anukul
         </div>
 
         <ul className="flex space-x-6">
