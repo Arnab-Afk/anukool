@@ -1,8 +1,4 @@
-
-
 import { useLayoutEffect, useRef, useState } from "react";
-
-
 import React from 'react'
 
 const people = [
@@ -23,10 +19,9 @@ const people = [
         title: "Full Stack Developer",
         description: "A full-stack developer is a web developer or engineer who works with both the front and back ends of a website or application.",
         role: "Full Stack Developer",
+        button: "Click me!",
 },
 
-
-  
 ];
 
 function classNames(...classes) {
@@ -52,6 +47,10 @@ const dataTable = () => {
     setChecked(!checked && !indeterminate);
     setIndeterminate(false);
   }
+  const handleButtonClick = () => {
+    console.log("Button clicked!");
+    
+  };
   return (
     <div className="px-4 sm:px-6 mt-10 lg:px-8">
       <div className="sm:flex sm:items-center">
@@ -60,7 +59,6 @@ const dataTable = () => {
             Candidate List
           </div>
         </div>
-        
       </div>
       <div className="mt-8 flow-root">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -124,7 +122,6 @@ const dataTable = () => {
                     >
                       Select
                     </th>
-                    
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
@@ -175,6 +172,14 @@ const dataTable = () => {
                         {person.role}
                       </td>
                       <td className="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3">
+                        
+                        <button
+                          type="button"
+                          className=" inline-flex items-center rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white"
+                          onClick={handleButtonClick}
+                        >
+                          Click me!
+                        </button>
                         
                       </td>
                     </tr>
