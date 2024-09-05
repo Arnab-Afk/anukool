@@ -1,32 +1,56 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-white shadow-xl rounded-lg p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-2xl font-bold">
+        <div className="text-black text-2xl font-bold">
           AnuKool
         </div>
 
         <ul className="flex space-x-6">
           <li>
-            <Link to="/dashboard" className="text-white hover:text-gray-300">
+            <Link
+              to="/"
+              className={`hover:text-blue-900 ${
+                isActive('/') ? 'font-bold' : 'text-black'
+              }`}
+            >
               Dashboard
             </Link>
           </li>
           <li>
-            <Link to="/commitee" className="text-white hover:text-gray-300">
+            <Link
+              to="/commitee"
+              className={`hover:text-blue-900 ${
+                isActive('/commitee') ? 'font-bold' : 'text-black'
+              }`}
+            >
               Committee
             </Link>
           </li>
           <li>
-            <Link to="/interview" className="text-white hover:text-gray-300">
+            <Link
+              to="/interview"
+              className={`hover:text-blue-900 ${
+                isActive('/interview') ? 'font-bold' : 'text-black'
+              }`}
+            >
               Interview
             </Link>
           </li>
           <li>
-            <Link to="/calendar" className="text-white hover:text-gray-300">
+            <Link
+              to="/calendar"
+              className={`hover:text-blue-900 ${
+                isActive('/calendar') ? 'font-bold' : 'text-black'
+              }`}
+            >
               Calendar
             </Link>
           </li>
