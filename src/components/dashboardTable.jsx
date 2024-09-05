@@ -18,7 +18,7 @@ const people = [
     description: "A back-end developer is responsible for server-side web application logic and integration of the work front-end developers do.",
     role: "Back-end Developer",
   },
-{
+  {
         name: "Rajesh Kumar",
         title: "Full Stack Developer",
         description: "A full-stack developer is a web developer or engineer who works with both the front and back ends of a website or application.",
