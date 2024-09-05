@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard.jsx'
 import Commitee from './pages/Commitee.jsx'
 import Interview from './pages/Interview.jsx'
 import Calendar from './pages/Calendar.jsx'
+import Login from './pages/Login.jsx'
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/commitee" element={<Commitee />} />
           <Route path="/interview" element={<Interview />} />
           <Route path="/calendar" element={<Calendar />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>
