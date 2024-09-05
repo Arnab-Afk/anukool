@@ -1,0 +1,49 @@
+{
+  "candidates": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "field": "Mechanical",
+      "expertsMatched": 3,
+      "matchPercentage": 85,
+      "applyingFor": "Mechanical Engineer",
+      "boardAlloted": false
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "field": "Computer Science",
+      "expertsMatched": 5,
+      "matchPercentage": 92,
+      "applyingFor": "Software Developer",
+      "boardAlloted": true
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "field": "Mechanical",
+      "expertsMatched": 2,
+      "matchPercentage": 78,
+      "applyingFor": "Product Designer",
+      "boardAlloted": false
+    },
+    {
+      "id": 4,
+      "name": "Alice Brown",
+      "field": "Computer Science",
+      "expertsMatched": 4,
+      "matchPercentage": 88,
+      "applyingFor": "Data Scientist",
+      "boardAlloted": true
+    },
+    {
+      "id": 5,
+      "name": "Charlie Wilson",
+      "field": "Mechanical",
+      "expertsMatched": 3,
+      "matchPercentage": 82,
+      "applyingFor": "Robotics Engineer",
+      "boardAlloted": false
+    }
+  ]
+}

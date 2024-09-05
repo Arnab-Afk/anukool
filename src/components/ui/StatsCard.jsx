@@ -34,7 +34,7 @@ export default function StatsCard() {
           <Monitor size="32" color="#1a63a8" variant="Bold" />
         </div>
         <div>
-          <p className="text-gray-500">Active Interview</p>
+          <p className="text-gray-500">Scheduled Interview</p>
           <h2 className="text-2xl font-semibold">{activeInterview}</h2>
         </div>
       </div>

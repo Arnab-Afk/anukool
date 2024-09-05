@@ -10,7 +10,7 @@ import Calendar from './pages/Calendar.jsx'
 const App = () => {
   return (
     <Router>
-      <div className="p-4">
+      <div className="bg-gray-100 min-h-screen p-4 gap-16">
       <Navbar />
         <Routes>
           <Route path="/" element={<Dashboard />} />

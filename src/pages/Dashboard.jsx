@@ -1,12 +1,15 @@
 import React from 'react'
 import StatsCard from '../components/ui/StatsCard.jsx'
+import CandidatesTable from '../components/CandidatesTable.jsx'
 
 const Dashboard = () => {
   return (
-  <>
-    <div>Dashboard</div>
-    <StatsCard />
-  </>
+    <div>
+      <div className="flex flex-col gap-28 pl-40 pr-40 pt-10 ">
+        <StatsCard />
+        <CandidatesTable />
+      </div>
+    </div>
 
   )
 }

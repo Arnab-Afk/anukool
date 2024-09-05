@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "bunx --bun vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -13,6 +13,8 @@
     "@headlessui/react": "^2.1.5",
     "@heroicons/react": "^2.1.5",
     "@radix-ui/react-slot": "^1.1.0",
+    "ag-grid-community": "^32.1.0",
+    "ag-grid-react": "^32.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "iconsax-react": "^0.0.8",
