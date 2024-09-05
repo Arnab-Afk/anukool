@@ -47,8 +47,9 @@ const CandidateBoardList = () => {
       field: 'boardAlloted',
       headerName: 'Board Alloted',
       cellRenderer: (params) => (
-        <button className="bg-gray-900 text-white text-xs font-medium px-2 py-1 rounded">
+        <button className="bg-red-900 text-white text-xs font-medium px-2 py-1 rounded">
           {params.value}
+          
         </button>
       ),
       filter: false  // Disable filter
@@ -61,9 +62,9 @@ const CandidateBoardList = () => {
   };
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Candidates - Board List</h1>
-      <div className="ag-theme-alpine h-[400px] w-full">
+    <div className="p-4 -mt-14">
+      <h1 className="text-2xl scale-125 font-bold mb-14">Candidates - Board List</h1>
+      <div className="ag-theme-alpine scale-125 h-auto w-full">
         <AgGridReact
           rowData={rowData}
           columnDefs={columnDefs}
