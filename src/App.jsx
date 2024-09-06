@@ -6,19 +6,20 @@ import Commitee from './pages/Commitee.jsx'
 import Interview from './pages/Interview.jsx'
 import Calendar from './pages/Calendar.jsx'
 import Login from './pages/Login.jsx'
-
+import User from './pages/User.jsx';
 
 const App = () => {
   return (
     <Router>
       <div className="bg-gray-100 min-h-screen p-4 gap-16">
-      <Navbar />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/commitee" element={<Commitee />} />
           <Route path="/interview" element={<Interview />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/user" element={<User />} />
         </Routes>
       </div>
     </Router>
