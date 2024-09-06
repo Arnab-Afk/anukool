@@ -1,33 +1,17 @@
 import { useContext } from "react";
 import UserContext from "../context/userContext";
-import { useNavigate } from "react-router-dom";
 
 
-export default function Login() {
+export default function LoginExpert() {
 
-  const { setUser } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault()
-    const email = event.target.email.value
-    const password = event.target.password.value
-    fetch('http://localhost:8000/api/auth/user/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('Success:', data)
-        setUser(data)
-        navigate('/')
-      })
-      .catch((error) => {
-        console.error('Error:', error)
-      })
+    const formData = new FormData(event.target)
+    const data = Object.fromEntries(formData)
+    console.log(data)
   }
 
   return (
