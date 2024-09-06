@@ -52,7 +52,7 @@ const User = () => {
       {selectedJobs.length > 0 && (
         <button onClick={handleOpenModal} className="open-modal-btn">Upload File</button>
       )}
-      <div className="ag-theme-alpine" style={{ height: 400, width: "100%" }}>
+      <div className="ag-theme-alpine" style={{ height: 210, width: 875 }}>
         <AgGridReact
           rowData={jobListings}
           columnDefs={columns}
