@@ -5,6 +5,7 @@ import "ag-grid-community/styles/ag-theme-alpine.css";
 import candidateData from "./candidateData.json";
 import { Bar, BarChart, ResponsiveContainer } from "recharts";
 import { Button } from "@/components/ui/button";
+import axios from "axios";
 import {
   Drawer,
   DrawerClose,
@@ -87,7 +88,11 @@ const data = [
 
 const CandidateBoardList = () => {
   const [rowData, setRowData] = useState([]);
-
+  useEffect(() => {
+    axios.get("http://localhost:8000/api/user/experts").then((res) => {
+      setRowData(res.data);
+    });
+  }, []);
   useEffect(() => {
     setRowData(candidateData.candidates);
   }, []);
