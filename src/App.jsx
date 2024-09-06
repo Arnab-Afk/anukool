@@ -6,6 +6,7 @@ import Commitee from './pages/Commitee.jsx'
 import Interview from './pages/Interview.jsx'
 import Calendar from './pages/Calendar.jsx'
 import Login from './pages/Login.jsx'
+import User from './pages/User.jsx';
 import Register from './pages/Register.jsx'
 import UserContext from './context/userContext.js';
 import LoginExpert from './pages/LoginExpert.jsx';
