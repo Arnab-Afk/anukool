@@ -8,6 +8,7 @@ import Calendar from './pages/Calendar.jsx'
 import Login from './pages/Login.jsx'
 import User from './pages/User.jsx';
 import Register from './pages/Register.jsx'
+import Expert from './pages/Expert.jsx';
 import UserContext from './context/userContext.js';
 import LoginExpert from './pages/LoginExpert.jsx';
 
