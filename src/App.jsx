@@ -10,7 +10,7 @@ import User from './pages/User.jsx';
 import Register from './pages/Register.jsx'
 import UserContext from './context/userContext.js';
 import LoginExpert from './pages/LoginExpert.jsx';
-
+import Expert from './pages/Expert.jsx';
 const AuthChecker = () => {
   const { user } = React.useContext(UserContext);
   return user ? <Outlet /> : <Navigate to='/login' />;
