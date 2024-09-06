@@ -1,7 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import { motion } from "framer-motion";
 import { IconUpload } from "@tabler/icons-react";
 import { useDropzone } from "react-dropzone";
+import UserContext from "../context/userContext";
 
 const mainVariant = {
   initial: {
@@ -24,11 +25,10 @@ const secondaryVariant = {
   },
 };
 
-export const FileUpload = ({ onChange }) => {
-  const [files, setFiles] = useState([]);
+export const FileUpload = ({ onChange, files, setFiles }) => {
   const fileInputRef = useRef(null);
 
-  const handleFileChange = (newFiles) => {
+  const handleFileChange = async (newFiles) => {
     setFiles((prevFiles) => [...prevFiles, ...newFiles]);
     onChange && onChange(newFiles);
   };
@@ -46,7 +46,8 @@ export const FileUpload = ({ onChange }) => {
     },
   });
 
-  const handleUpload = () => {
+  const handleUpload = async () => {
+     // express
     alert('Files uploaded successfully!');
   };
 

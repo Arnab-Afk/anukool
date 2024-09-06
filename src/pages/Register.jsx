@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import UserContext from "../context/userContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 
 export default function Login() {
 
   const { setUser } = useContext(UserContext);
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -96,10 +97,10 @@ export default function Login() {
           </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
-            Not a member?{' '}
-            <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Start a 14 day free trial
-            </a>
+            Already Registered?{' '}
+            <Link to='/register' className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              Login
+            </Link>
           </p>
         </div>
       </div>

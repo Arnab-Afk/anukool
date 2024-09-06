@@ -46,12 +46,12 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/calendar"
+              to="/user"
               className={`hover:text-blue-900 ${
-                isActive('/calendar') ? 'font-bold' : 'text-black'
+                isActive('/user') ? 'font-bold' : 'text-black'
               }`}
             >
-              Calendar
+              User
             </Link>
           </li>
         </ul>

@@ -3,57 +3,66 @@ import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import candidateData from './candidateData.json';
+import axios from 'axios';
 
 const CandidateBoardList = () => {
   const [rowData, setRowData] = useState([]);
-
+  const [columnDefss] = useState([]);
   useEffect(() => {
-    setRowData(candidateData.candidates);
-  }, []);
+    axios.get('http://localhost:8000/api/applications')
+      .then((response) => {
+        console.log(response.data);
+        setRowData(response.data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
+  , []);
+
+  
 
   const [columnDefs] = useState([
     {
-      field: 'name',
+      field: 'user.name',
       headerName: 'Candidate Name',
       cellClass: 'font-medium text-gray-900',
       filter: false  // Disable filter
     },
     {
-      field: 'field',
-      headerName: 'Field',
+      field: 'user.email',
+      headerName: 'Email',
       cellClass: 'text-gray-600',
       filter: 'agTextColumnFilter'    // Enable filter
     },
+    
     {
-      field: 'expertMatched',
-      headerName: 'Expert Matched',
-      cellClass: 'text-gray-600',
-      filter: false  // Disable filter
-    },
-    {
-      field: 'matchPercentage',
+      field: 'candiditate_relevancy',
       headerName: 'Match %',
       cellRenderer: (params) => `${params.value}%`,
       cellClass: 'text-gray-600',
       filter: false  // Disable filter
     },
     {
-      field: 'applyingFor',
+      field: 'jobpost.title',
       headerName: 'Applying for',
       cellClass: 'text-gray-600',
       filter: 'agTextColumnFilter'    // Enable filter
     },
     {
-      field: 'boardAlloted',
-      headerName: 'Board Alloted',
-      cellRenderer: (params) => (
-        <button className="bg-red-900 text-white text-xs font-medium px-2 py-1 rounded">
-          {params.value}
-          
-        </button>
-      ),
-      filter: false  // Disable filter
+      field: 'jobpost.description',
+      headerName: 'Job Description',
+      cellClass: 'text-gray-600',
+      filter: 'agTextColumnFilter'    // Enable filter
+    },
+    {
+      field: 'jobpost.createdAt',
+      headerName: 'Time',
+      cellRenderer: (params) => Date(params.value).toString().toLocaleUpperCase(),
+      cellClass: 'text-gray-600',
+      filter: 'agTextColumnFilter'    // Enable filter
     }
+    
   ]);
 
   const defaultColDef = {
@@ -63,7 +72,7 @@ const CandidateBoardList = () => {
 
   return (
     <div className="p-4 -mt-14">
-      <h1 className="text-2xl scale-125 font-bold mb-14">Candidates - Board List</h1>
+      <h1 className="text-2xl scale-125 font-bold mb-14">Candidates Relevancy score</h1>
       <div className="ag-theme-alpine scale-125 h-auto w-full">
         <AgGridReact
           rowData={rowData}
